@@ -13,7 +13,7 @@ class TrainService:
     def ExecuteTraining(self, TrainData):
         model = self.getInitialModel()
         model, disablePipelines = self.definePipeline(model, TrainData)
-        model = Train(model, TrainData, disablePipelines)
+        model = self.Train(model, TrainData, disablePipelines)
         
         self.saveModel(model)
 
